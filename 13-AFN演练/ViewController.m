@@ -39,6 +39,7 @@
     [[manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         // 指定下载文件保存的路径
         // 下载到沙盒doc目录下
+        //hahahah
        NSURL *docUrl =  [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:NULL create:YES error:NULL];
         NSLog(@"docUrl = %@",docUrl);
         return [docUrl URLByAppendingPathComponent:response.suggestedFilename];
